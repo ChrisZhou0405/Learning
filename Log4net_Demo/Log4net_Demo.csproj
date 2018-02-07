@@ -75,7 +75,6 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="log4net.config" />
-    <Fakes Include="Fakes\log4net.fakes" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
