@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Log4net_Demo.Common;
-
+using MvcLearn;
 namespace Log4net_Demo.Controllers
 {
     public class HomeController : Controller
@@ -21,6 +21,12 @@ namespace Log4net_Demo.Controllers
                 LogHelper.Error(LogAppender.RollingFileAppender, ex.ToString(), ex);
             }
 
+            return View();
+        }
+
+        public ActionResult ToUpper(string str)
+        {
+            MvcLearn.Common.Utility.ToUpper(str);
             return View();
         }
     }
