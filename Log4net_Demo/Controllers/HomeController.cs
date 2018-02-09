@@ -15,6 +15,7 @@ namespace Log4net_Demo.Controllers
             try
             {
                 int result = 8/id;
+
             }
             catch (Exception ex)
             {
