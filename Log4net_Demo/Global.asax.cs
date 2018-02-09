@@ -9,7 +9,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 
-//[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
 namespace Log4net_Demo
 {
     public class Global : System.Web.HttpApplication
@@ -17,7 +17,7 @@ namespace Log4net_Demo
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            log4net.Config.XmlConfigurator.Configure(new System.IO.FileInfo($@"{ AppDomain.CurrentDomain.BaseDirectory }\log4net.config"));
+           //log4net.Config.XmlConfigurator.Configure(new System.IO.FileInfo($@"{ AppDomain.CurrentDomain.BaseDirectory }\log4net.config"));
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

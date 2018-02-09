@@ -5,8 +5,6 @@ using System.Web;
 using log4net;
 using System.IO;
 using System.Diagnostics;
-
-
 namespace Log4net_Demo.Common
 {
     public class LogHelper
