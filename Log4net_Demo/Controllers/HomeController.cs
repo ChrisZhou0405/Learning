@@ -16,9 +16,9 @@ namespace Log4net_Demo.Controllers
             {
                 int result = 8/id;
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                LogHelper.Error(LogAppender.RollingFileAppender, e.ToString(), e);
+                LogHelper.Error(LogAppender.RollingFileAppender, ex.ToString(), ex);
             }
 
             return View();
