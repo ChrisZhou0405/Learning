@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI Learn", "WebAPI Lear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "高级语法_特性标签", "高级语法\高级语法_特性标签.csproj", "{8ADBC992-B64B-4ED8-9B0E-F52F77033AF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ Learn", "LINQ Learn\LINQ Learn.csproj", "{C37A3498-AC17-430E-A426-E807B1B9C366}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8ADBC992-B64B-4ED8-9B0E-F52F77033AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ADBC992-B64B-4ED8-9B0E-F52F77033AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ADBC992-B64B-4ED8-9B0E-F52F77033AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C37A3498-AC17-430E-A426-E807B1B9C366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37A3498-AC17-430E-A426-E807B1B9C366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37A3498-AC17-430E-A426-E807B1B9C366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37A3498-AC17-430E-A426-E807B1B9C366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
