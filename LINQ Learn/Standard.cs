@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace LINQ_Learn
 {
-    class Student
+    class Standard
     {
-        public int StudentID { get; set; }
-        public string StudentName { get; set; }
-        public int Age { get; set; }
         public int StandardID { get; set; }
+        public string StandardName { get; set; }
     }
 }
