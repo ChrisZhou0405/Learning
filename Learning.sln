@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "高级语法_特性标签",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ Learn", "LINQ Learn\LINQ Learn.csproj", "{C37A3498-AC17-430E-A426-E807B1B9C366}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestingDemo", "UnitTestingDemo\UnitTestingDemo.csproj", "{C5A9D461-C66D-473A-89B8-BF12CEC05D52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie", "RazorPagesMovie\RazorPagesMovie.csproj", "{9B0DEB09-1DD3-4CA1-8E6D-73D5A1FADC6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{C37A3498-AC17-430E-A426-E807B1B9C366}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C37A3498-AC17-430E-A426-E807B1B9C366}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C37A3498-AC17-430E-A426-E807B1B9C366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A9D461-C66D-473A-89B8-BF12CEC05D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A9D461-C66D-473A-89B8-BF12CEC05D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A9D461-C66D-473A-89B8-BF12CEC05D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A9D461-C66D-473A-89B8-BF12CEC05D52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B0DEB09-1DD3-4CA1-8E6D-73D5A1FADC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B0DEB09-1DD3-4CA1-8E6D-73D5A1FADC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B0DEB09-1DD3-4CA1-8E6D-73D5A1FADC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B0DEB09-1DD3-4CA1-8E6D-73D5A1FADC6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

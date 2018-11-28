@@ -301,7 +301,9 @@ namespace LINQ_Learn
           var result=  strList.TakeWhile(s=>s.Length>4);
             foreach (string str in result)
                 Console.WriteLine(str);
-        } 
+        }
         #endregion
+
+     
     }
 }
