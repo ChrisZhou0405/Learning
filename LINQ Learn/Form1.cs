@@ -34,7 +34,8 @@ namespace LINQ_Learn
         private void button2_Click(object sender, EventArgs e)
         {
             //使用Where子句过滤集合中的奇数元素并仅返回偶数元素。请记住，索引从零开始。
-            var filteredResult = studentList.Where((s, i) => {
+            var filteredResult = studentList.Where((s, i) =>
+            {
                 if (i % 2 == 0) // if it is even element
                     return true;
 
@@ -44,7 +45,7 @@ namespace LINQ_Learn
             foreach (var std in filteredResult)
                 Console.WriteLine(std.StudentName);
         }
-        
+
 
         #endregion
 
@@ -67,12 +68,12 @@ namespace LINQ_Learn
             {
                 Console.WriteLine(item);
             }
-            
+
         }
         #endregion
 
         #region  OrderBy
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
             //var orderResult = from result in studentList
@@ -96,5 +97,23 @@ namespace LINQ_Learn
             return s.Age;
         }
         #endregion
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IList<Student> studentList1 = new List<Student>() {
+        new Student() { StudentID = 1, StudentName = "John", Age = 18 } ,
+        new Student() { StudentID = 2, StudentName = "Steve",  Age = 15 } ,
+        new Student() { StudentID = 3, StudentName = "Bill",  Age = 25 }
+           };
+
+            IList<Student> studentList2 = new List<Student>() {
+        new Student() { StudentID = 1, StudentName = "John", Age = 18 } ,
+        new Student() { StudentID = 2, StudentName = "Steve",  Age = 19 } ,
+        new Student() { StudentID = 3, StudentName = "Bill",  Age = 25 }
+         };
+            bool isequals = studentList1.SequenceEqual(studentList2,new StudentComparer());
+            Console.WriteLine(isequals);
+
+        }
     }
 }
