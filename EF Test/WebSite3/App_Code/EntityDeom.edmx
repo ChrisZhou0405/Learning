@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WhymeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="K_F_FeedBack">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="IsEnable" Type="int" />
+          <Property Name="IsArchiving" Type="int" />
+          <Property Name="Orders" Type="bigint" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="DelTime" Type="datetime" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="NodeCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FlowState" Type="int" />
+          <Property Name="ReferenceID" Type="varchar" MaxLength="15" />
+          <Property Name="AddMan" Type="varchar" MaxLength="50" />
+          <Property Name="IP" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Name" Type="nvarchar" MaxLength="1024" />
+          <Property Name="EMail" Type="nvarchar" MaxLength="1024" />
+          <Property Name="LinkPhone" Type="nvarchar" MaxLength="64" />
+          <Property Name="LinkAddress" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="DealResult" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="K_FlowStep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Orders" Type="int" />
+          <Property Name="IsDel" Type="bit" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="AddMan" Type="nvarchar" MaxLength="15" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="1000" />
+          <Property Name="SuccessName" Type="nvarchar" MaxLength="64" />
+          <Property Name="SuccessState" Type="int" />
+          <Property Name="FailName" Type="nvarchar" MaxLength="64" />
+          <Property Name="FailState" Type="int" />
+          <Property Name="GroupID" Type="nvarchar" MaxLength="500" />
+          <Property Name="ReviewFlowStateGroup" Type="nvarchar" MaxLength="200" />
+          <Property Name="ReviewFlowId" Type="nvarchar" MaxLength="15" />
+          <Property Name="IsEnable" Type="bit" />
+          <Property Name="NodeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="delTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="K_Member">
+          <Key>
+            <PropertyRef Name="MemberID" />
+          </Key>
+          <Property Name="MemberID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GroupID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ModleID" Type="varchar" MaxLength="15" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Funds" Type="float" />
+          <Property Name="FundFreeze" Type="float" />
+          <Property Name="Point" Type="int" Nullable="false" />
+          <Property Name="Integral" Type="int" Nullable="false" />
+          <Property Name="StateID" Type="tinyint" />
+          <Property Name="IsCheck" Type="tinyint" />
+          <Property Name="IsEmailValid" Type="bit" Nullable="false" />
+          <Property Name="IsDel" Type="bit" />
+          <Property Name="RegitIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="RegitDate" Type="datetime" Nullable="false" />
+          <Property Name="PreLoginIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="PreLoginDate" Type="datetime" />
+          <Property Name="LastLoginIP" Type="nvarchar" MaxLength="20" />
+          <Property Name="LastLoginDate" Type="datetime" />
+          <Property Name="LastPub" Type="datetime" />
+          <Property Name="LoginTimes" Type="int" Nullable="false" />
+          <Property Name="NodeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="HeadImg" Type="nvarchar" MaxLength="200" />
+          <Property Name="ThemeID" Type="nvarchar" MaxLength="20" />
+          <Property Name="UserGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="PubTipLevel" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReadRight" Type="int" Nullable="false" />
+          <Property Name="Golds" Type="int" Nullable="false" />
+          <Property Name="Prestige" Type="int" Nullable="false" />
+          <Property Name="SaveGolds" Type="int" Nullable="false" />
+          <Property Name="Tips" Type="int" Nullable="false" />
+          <Property Name="VeryTips" Type="int" Nullable="false" />
+          <Property Name="TotalOnlineHour" Type="int" Nullable="false" />
+          <Property Name="MonthHour" Type="int" Nullable="false" />
+          <Property Name="Moderator" Type="nvarchar" MaxLength="50" />
+          <Property Name="BestAnswerCount" Type="int" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="10" />
+          <Property Name="Token" Type="nvarchar" MaxLength="50" />
+          <Property Name="PwdVe" Type="nvarchar" MaxLength="50" />
+          <Property Name="RealName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Birthday" Type="smalldatetime" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="20" />
+          <Property Name="Marriage" Type="tinyint" />
+          <Property Name="Intro" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="K_MemberGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="20" />
+          <Property Name="ServerIntro" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsVisit" Type="tinyint" />
+          <Property Name="IsSearch" Type="tinyint" />
+          <Property Name="IsPub" Type="tinyint" />
+          <Property Name="IsSelfUpgrade" Type="tinyint" />
+          <Property Name="YearPrices" Type="float" />
+          <Property Name="MonthPrices" Type="float" />
+          <Property Name="DayPrices" Type="float" />
+          <Property Name="IsDisable" Type="tinyint" />
+          <Property Name="Orders" Type="int" />
+          <Property Name="IsDel" Type="bit" />
+          <Property Name="AddMan" Type="nvarchar" MaxLength="20" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="NodeCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="SiteID" Type="int" />
+          <Property Name="Toplimit" Type="int" />
+          <Property Name="Lowerlimit" Type="int" />
+          <Property Name="Discount" Type="int" />
+          <Property Name="IsShowPrice" Type="bit" />
+        </EntityType>
+        <EntityType Name="K_Special">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ModelID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="SpecialIdentifier" Type="varchar" MaxLength="64" />
+          <Property Name="DirectoryName" Type="varchar" MaxLength="64" />
+          <Property Name="Icon" Type="varchar" MaxLength="256" />
+          <Property Name="Tips" Type="nvarchar" MaxLength="512" />
+          <Property Name="Desc" Type="nvarchar" MaxLength="512" />
+          <Property Name="MetaKeyword" Type="nvarchar" MaxLength="256" />
+          <Property Name="MetaDescription" Type="nvarchar" MaxLength="512" />
+          <Property Name="IsElite" Type="bit" />
+          <Property Name="OpenType" Type="int" />
+          <Property Name="TemplatePath" Type="varchar" MaxLength="256" />
+          <Property Name="SearchTemplatePath" Type="varchar" MaxLength="256" />
+          <Property Name="PagePostfix" Type="int" />
+          <Property Name="Ishtml" Type="bit" />
+          <Property Name="ListPageSaveType" Type="int" />
+          <Property Name="Orders" Type="bigint" Nullable="false" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="IsDel" Type="bit" Nullable="false" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="K_SpecialInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SpecialID" Type="varchar" MaxLength="15" />
+          <Property Name="SpecialMenuID" Type="varchar" MaxLength="15" />
+          <Property Name="InfoID" Type="varchar" MaxLength="15" />
+          <Property Name="CommentTitle" Type="nvarchar" MaxLength="256" />
+          <Property Name="OpposeView" Type="nvarchar" MaxLength="1024" />
+          <Property Name="SupportView" Type="nvarchar" MaxLength="1024" />
+          <Property Name="OpposeCount" Type="int" />
+          <Property Name="SupportCount" Type="int" />
+        </EntityType>
+        <EntityContainer Name="WhymeModelStoreContainer">
+          <EntitySet Name="K_F_FeedBack" EntityType="Self.K_F_FeedBack" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_FlowStep" EntityType="Self.K_FlowStep" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_Member" EntityType="Self.K_Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_MemberGroup" EntityType="Self.K_MemberGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_Special" EntityType="Self.K_Special" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_SpecialInfo" EntityType="Self.K_SpecialInfo" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WhymeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="K_F_FeedBack">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="IsEnable" Type="Int32" />
+          <Property Name="IsArchiving" Type="Int32" />
+          <Property Name="Orders" Type="Int64" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="DelTime" Type="DateTime" Precision="3" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FlowState" Type="Int32" />
+          <Property Name="ReferenceID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AddMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="EMail" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="LinkPhone" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="LinkAddress" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DealResult" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="K_FlowStep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Orders" Type="Int32" />
+          <Property Name="IsDel" Type="Boolean" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="AddMan" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="SuccessName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="SuccessState" Type="Int32" />
+          <Property Name="FailName" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="FailState" Type="Int32" />
+          <Property Name="GroupID" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReviewFlowStateGroup" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ReviewFlowId" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="IsEnable" Type="Boolean" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="delTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="K_Member">
+          <Key>
+            <PropertyRef Name="MemberID" />
+          </Key>
+          <Property Name="MemberID" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GroupID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ModleID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Funds" Type="Double" />
+          <Property Name="FundFreeze" Type="Double" />
+          <Property Name="Point" Type="Int32" Nullable="false" />
+          <Property Name="Integral" Type="Int32" Nullable="false" />
+          <Property Name="StateID" Type="Byte" />
+          <Property Name="IsCheck" Type="Byte" />
+          <Property Name="IsEmailValid" Type="Boolean" Nullable="false" />
+          <Property Name="IsDel" Type="Boolean" />
+          <Property Name="RegitIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="RegitDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PreLoginIP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PreLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="LastLoginIP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LastLoginDate" Type="DateTime" Precision="3" />
+          <Property Name="LastPub" Type="DateTime" Precision="3" />
+          <Property Name="LoginTimes" Type="Int32" Nullable="false" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="HeadImg" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ThemeID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UserGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PubTipLevel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReadRight" Type="Int32" Nullable="false" />
+          <Property Name="Golds" Type="Int32" Nullable="false" />
+          <Property Name="Prestige" Type="Int32" Nullable="false" />
+          <Property Name="SaveGolds" Type="Int32" Nullable="false" />
+          <Property Name="Tips" Type="Int32" Nullable="false" />
+          <Property Name="VeryTips" Type="Int32" Nullable="false" />
+          <Property Name="TotalOnlineHour" Type="Int32" Nullable="false" />
+          <Property Name="MonthHour" Type="Int32" Nullable="false" />
+          <Property Name="Moderator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BestAnswerCount" Type="Int32" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Token" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PwdVe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RealName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="0" />
+          <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Marriage" Type="Byte" />
+          <Property Name="Intro" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="K_MemberGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GroupName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ServerIntro" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsVisit" Type="Byte" />
+          <Property Name="IsSearch" Type="Byte" />
+          <Property Name="IsPub" Type="Byte" />
+          <Property Name="IsSelfUpgrade" Type="Byte" />
+          <Property Name="YearPrices" Type="Double" />
+          <Property Name="MonthPrices" Type="Double" />
+          <Property Name="DayPrices" Type="Double" />
+          <Property Name="IsDisable" Type="Byte" />
+          <Property Name="Orders" Type="Int32" />
+          <Property Name="IsDel" Type="Boolean" />
+          <Property Name="AddMan" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SiteID" Type="Int32" />
+          <Property Name="Toplimit" Type="Int32" />
+          <Property Name="Lowerlimit" Type="Int32" />
+          <Property Name="Discount" Type="Int32" />
+          <Property Name="IsShowPrice" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="K_Special">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ModelID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SpecialIdentifier" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="DirectoryName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="Icon" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Tips" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Desc" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="MetaKeyword" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="MetaDescription" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="IsElite" Type="Boolean" />
+          <Property Name="OpenType" Type="Int32" />
+          <Property Name="TemplatePath" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="SearchTemplatePath" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="PagePostfix" Type="Int32" />
+          <Property Name="Ishtml" Type="Boolean" />
+          <Property Name="ListPageSaveType" Type="Int32" />
+          <Property Name="Orders" Type="Int64" Nullable="false" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDel" Type="Boolean" Nullable="false" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="K_SpecialInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="SpecialID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialMenuID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="InfoID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CommentTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="OpposeView" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="SupportView" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="OpposeCount" Type="Int32" />
+          <Property Name="SupportCount" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ChristDemoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="K_F_FeedBack" EntityType="Self.K_F_FeedBack" />
+          <EntitySet Name="K_FlowStep" EntityType="Self.K_FlowStep" />
+          <EntitySet Name="K_Member" EntityType="Self.K_Member" />
+          <EntitySet Name="K_MemberGroup" EntityType="Self.K_MemberGroup" />
+          <EntitySet Name="K_Special" EntityType="Self.K_Special" />
+          <EntitySet Name="K_SpecialInfo" EntityType="Self.K_SpecialInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WhymeModelStoreContainer" CdmEntityContainer="ChristDemoEntities">
+          <EntitySetMapping Name="K_F_FeedBack">
+            <EntityTypeMapping TypeName="WhymeModel.K_F_FeedBack">
+              <MappingFragment StoreEntitySet="K_F_FeedBack">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="IsArchiving" ColumnName="IsArchiving" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="FlowState" ColumnName="FlowState" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="EMail" ColumnName="EMail" />
+                <ScalarProperty Name="LinkPhone" ColumnName="LinkPhone" />
+                <ScalarProperty Name="LinkAddress" ColumnName="LinkAddress" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="DealResult" ColumnName="DealResult" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_FlowStep">
+            <EntityTypeMapping TypeName="WhymeModel.K_FlowStep">
+              <MappingFragment StoreEntitySet="K_FlowStep">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="SuccessName" ColumnName="SuccessName" />
+                <ScalarProperty Name="SuccessState" ColumnName="SuccessState" />
+                <ScalarProperty Name="FailName" ColumnName="FailName" />
+                <ScalarProperty Name="FailState" ColumnName="FailState" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ReviewFlowStateGroup" ColumnName="ReviewFlowStateGroup" />
+                <ScalarProperty Name="ReviewFlowId" ColumnName="ReviewFlowId" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="delTime" ColumnName="delTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_Member">
+            <EntityTypeMapping TypeName="WhymeModel.K_Member">
+              <MappingFragment StoreEntitySet="K_Member">
+                <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="ModleID" ColumnName="ModleID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Funds" ColumnName="Funds" />
+                <ScalarProperty Name="FundFreeze" ColumnName="FundFreeze" />
+                <ScalarProperty Name="Point" ColumnName="Point" />
+                <ScalarProperty Name="Integral" ColumnName="Integral" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="IsCheck" ColumnName="IsCheck" />
+                <ScalarProperty Name="IsEmailValid" ColumnName="IsEmailValid" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="RegitIP" ColumnName="RegitIP" />
+                <ScalarProperty Name="RegitDate" ColumnName="RegitDate" />
+                <ScalarProperty Name="PreLoginIP" ColumnName="PreLoginIP" />
+                <ScalarProperty Name="PreLoginDate" ColumnName="PreLoginDate" />
+                <ScalarProperty Name="LastLoginIP" ColumnName="LastLoginIP" />
+                <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+                <ScalarProperty Name="LastPub" ColumnName="LastPub" />
+                <ScalarProperty Name="LoginTimes" ColumnName="LoginTimes" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="HeadImg" ColumnName="HeadImg" />
+                <ScalarProperty Name="ThemeID" ColumnName="ThemeID" />
+                <ScalarProperty Name="UserGroup" ColumnName="UserGroup" />
+                <ScalarProperty Name="PubTipLevel" ColumnName="PubTipLevel" />
+                <ScalarProperty Name="ReadRight" ColumnName="ReadRight" />
+                <ScalarProperty Name="Golds" ColumnName="Golds" />
+                <ScalarProperty Name="Prestige" ColumnName="Prestige" />
+                <ScalarProperty Name="SaveGolds" ColumnName="SaveGolds" />
+                <ScalarProperty Name="Tips" ColumnName="Tips" />
+                <ScalarProperty Name="VeryTips" ColumnName="VeryTips" />
+                <ScalarProperty Name="TotalOnlineHour" ColumnName="TotalOnlineHour" />
+                <ScalarProperty Name="MonthHour" ColumnName="MonthHour" />
+                <ScalarProperty Name="Moderator" ColumnName="Moderator" />
+                <ScalarProperty Name="BestAnswerCount" ColumnName="BestAnswerCount" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="PwdVe" ColumnName="PwdVe" />
+                <ScalarProperty Name="RealName" ColumnName="RealName" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Marriage" ColumnName="Marriage" />
+                <ScalarProperty Name="Intro" ColumnName="Intro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_MemberGroup">
+            <EntityTypeMapping TypeName="WhymeModel.K_MemberGroup">
+              <MappingFragment StoreEntitySet="K_MemberGroup">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="ServerIntro" ColumnName="ServerIntro" />
+                <ScalarProperty Name="IsVisit" ColumnName="IsVisit" />
+                <ScalarProperty Name="IsSearch" ColumnName="IsSearch" />
+                <ScalarProperty Name="IsPub" ColumnName="IsPub" />
+                <ScalarProperty Name="IsSelfUpgrade" ColumnName="IsSelfUpgrade" />
+                <ScalarProperty Name="YearPrices" ColumnName="YearPrices" />
+                <ScalarProperty Name="MonthPrices" ColumnName="MonthPrices" />
+                <ScalarProperty Name="DayPrices" ColumnName="DayPrices" />
+                <ScalarProperty Name="IsDisable" ColumnName="IsDisable" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="Toplimit" ColumnName="Toplimit" />
+                <ScalarProperty Name="Lowerlimit" ColumnName="Lowerlimit" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="IsShowPrice" ColumnName="IsShowPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_Special">
+            <EntityTypeMapping TypeName="WhymeModel.K_Special">
+              <MappingFragment StoreEntitySet="K_Special">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+                <ScalarProperty Name="SpecialIdentifier" ColumnName="SpecialIdentifier" />
+                <ScalarProperty Name="DirectoryName" ColumnName="DirectoryName" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="Tips" ColumnName="Tips" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="MetaKeyword" ColumnName="MetaKeyword" />
+                <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+                <ScalarProperty Name="IsElite" ColumnName="IsElite" />
+                <ScalarProperty Name="OpenType" ColumnName="OpenType" />
+                <ScalarProperty Name="TemplatePath" ColumnName="TemplatePath" />
+                <ScalarProperty Name="SearchTemplatePath" ColumnName="SearchTemplatePath" />
+                <ScalarProperty Name="PagePostfix" ColumnName="PagePostfix" />
+                <ScalarProperty Name="Ishtml" ColumnName="Ishtml" />
+                <ScalarProperty Name="ListPageSaveType" ColumnName="ListPageSaveType" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_SpecialInfo">
+            <EntityTypeMapping TypeName="WhymeModel.K_SpecialInfo">
+              <MappingFragment StoreEntitySet="K_SpecialInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SpecialID" ColumnName="SpecialID" />
+                <ScalarProperty Name="SpecialMenuID" ColumnName="SpecialMenuID" />
+                <ScalarProperty Name="InfoID" ColumnName="InfoID" />
+                <ScalarProperty Name="CommentTitle" ColumnName="CommentTitle" />
+                <ScalarProperty Name="OpposeView" ColumnName="OpposeView" />
+                <ScalarProperty Name="SupportView" ColumnName="SupportView" />
+                <ScalarProperty Name="OpposeCount" ColumnName="OpposeCount" />
+                <ScalarProperty Name="SupportCount" ColumnName="SupportCount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="K_U_Jobs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="IsEnable" Type="int" />
+          <Property Name="IsArchiving" Type="int" />
+          <Property Name="Orders" Type="bigint" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="DelTime" Type="datetime" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="NodeCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FlowState" Type="int" />
+          <Property Name="ReferenceID" Type="varchar" MaxLength="15" />
+          <Property Name="AddMan" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="512" />
+          <Property Name="WorkAddr" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Num" Type="nvarchar" MaxLength="100" />
+          <Property Name="Salary" Type="nvarchar" MaxLength="100" />
+          <Property Name="PubDate" Type="datetime" />
+          <Property Name="Requirement" Type="nvarchar(max)" />
+          <Property Name="Content" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="K_U_News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="IsEnable" Type="int" />
+          <Property Name="IsArchiving" Type="int" />
+          <Property Name="Orders" Type="bigint" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="DelTime" Type="datetime" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="NodeCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FlowState" Type="int" />
+          <Property Name="ReferenceID" Type="varchar" MaxLength="15" />
+          <Property Name="AddMan" Type="varchar" MaxLength="50" />
+          <Property Name="MetaDescript" Type="nvarchar" MaxLength="1024" />
+          <Property Name="MetaKeyword" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Title" Type="nvarchar" MaxLength="512" />
+          <Property Name="TitleImg" Type="nvarchar" MaxLength="100" />
+          <Property Name="PubDate" Type="datetime" />
+          <Property Name="Intro" Type="nvarchar" MaxLength="512" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Attach" Type="nvarchar" MaxLength="100" />
+          <Property Name="PageTitle" Type="varchar" MaxLength="256" />
+          <Property Name="IsHtml" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="K_U_product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="IsEnable" Type="int" />
+          <Property Name="IsArchiving" Type="int" />
+          <Property Name="Orders" Type="bigint" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="DelTime" Type="datetime" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="NodeCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FlowState" Type="int" />
+          <Property Name="ReferenceID" Type="varchar" MaxLength="15" />
+          <Property Name="AddMan" Type="varchar" MaxLength="50" />
+          <Property Name="MetaDescript" Type="nvarchar" MaxLength="1024" />
+          <Property Name="MetaKeyword" Type="nvarchar" MaxLength="1024" />
+          <Property Name="Title" Type="nvarchar" MaxLength="512" />
+          <Property Name="PubDate" Type="datetime" />
+          <Property Name="Intro" Type="nvarchar" MaxLength="512" />
+          <Property Name="BigImg" Type="nvarchar" MaxLength="100" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="SmallImg" Type="nvarchar" MaxLength="100" />
+          <Property Name="Attach" Type="nvarchar" MaxLength="100" />
+          <Property Name="tuij" Type="nvarchar" MaxLength="100" />
+          <Property Name="productuse" Type="nvarchar" MaxLength="512" />
+          <Property Name="PageTitle" Type="varchar" MaxLength="256" />
+          <Property Name="IsHtml" Type="int" Nullable="false" />
+          <Property Name="xc" Type="nvarchar" MaxLength="100" />
+          <Property Name="dtcs" Type="nvarchar" MaxLength="100" />
+          <Property Name="jjfa" Type="nvarchar(max)" />
+          <Property Name="cpal" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="K_U_Show">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="IsDel" Type="int" />
+          <Property Name="IsEnable" Type="int" />
+          <Property Name="IsArchiving" Type="int" />
+          <Property Name="Orders" Type="bigint" />
+          <Property Name="AddDate" Type="datetime" />
+          <Property Name="DelTime" Type="datetime" />
+          <Property Name="SiteID" Type="int" Nullable="false" />
+          <Property Name="NodeCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FlowState" Type="int" />
+          <Property Name="ReferenceID" Type="varchar" MaxLength="15" />
+          <Property Name="AddMan" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="512" />
+          <Property Name="ShowDate" Type="nvarchar" MaxLength="100" />
+          <Property Name="Addr" Type="nvarchar" MaxLength="100" />
+          <Property Name="Team" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="K_U_Jobs" EntityType="Self.K_U_Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_U_News" EntityType="Self.K_U_News" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_U_product" EntityType="Self.K_U_product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="K_U_Show" EntityType="Self.K_U_Show" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="K_U_Jobs">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="IsEnable" Type="Int32" />
+          <Property Name="IsArchiving" Type="Int32" />
+          <Property Name="Orders" Type="Int64" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="DelTime" Type="DateTime" Precision="3" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FlowState" Type="Int32" />
+          <Property Name="ReferenceID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AddMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="WorkAddr" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Num" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Salary" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PubDate" Type="DateTime" Precision="3" />
+          <Property Name="Requirement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="K_U_News">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="IsEnable" Type="Int32" />
+          <Property Name="IsArchiving" Type="Int32" />
+          <Property Name="Orders" Type="Int64" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="DelTime" Type="DateTime" Precision="3" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FlowState" Type="Int32" />
+          <Property Name="ReferenceID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AddMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MetaDescript" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="MetaKeyword" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="TitleImg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PubDate" Type="DateTime" Precision="3" />
+          <Property Name="Intro" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Attach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PageTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="IsHtml" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="K_U_product">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="IsEnable" Type="Int32" />
+          <Property Name="IsArchiving" Type="Int32" />
+          <Property Name="Orders" Type="Int64" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="DelTime" Type="DateTime" Precision="3" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FlowState" Type="Int32" />
+          <Property Name="ReferenceID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AddMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MetaDescript" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="MetaKeyword" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="PubDate" Type="DateTime" Precision="3" />
+          <Property Name="Intro" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="BigImg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SmallImg" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Attach" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="tuij" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="productuse" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="PageTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="IsHtml" Type="Int32" Nullable="false" />
+          <Property Name="xc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="dtcs" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="jjfa" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="cpal" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="K_U_Show">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IsDel" Type="Int32" />
+          <Property Name="IsEnable" Type="Int32" />
+          <Property Name="IsArchiving" Type="Int32" />
+          <Property Name="Orders" Type="Int64" />
+          <Property Name="AddDate" Type="DateTime" Precision="3" />
+          <Property Name="DelTime" Type="DateTime" Precision="3" />
+          <Property Name="SiteID" Type="Int32" Nullable="false" />
+          <Property Name="NodeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FlowState" Type="Int32" />
+          <Property Name="ReferenceID" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="AddMan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+          <Property Name="ShowDate" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Addr" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Team" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="K_U_Jobs" EntityType="Self.K_U_Jobs" />
+          <EntitySet Name="K_U_News" EntityType="Self.K_U_News" />
+          <EntitySet Name="K_U_product" EntityType="Self.K_U_product" />
+          <EntitySet Name="K_U_Show" EntityType="Self.K_U_Show" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="K_U_Jobs">
+            <EntityTypeMapping TypeName="Model.K_U_Jobs">
+              <MappingFragment StoreEntitySet="K_U_Jobs">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="IsArchiving" ColumnName="IsArchiving" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="FlowState" ColumnName="FlowState" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="WorkAddr" ColumnName="WorkAddr" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+                <ScalarProperty Name="Requirement" ColumnName="Requirement" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_U_News">
+            <EntityTypeMapping TypeName="Model.K_U_News">
+              <MappingFragment StoreEntitySet="K_U_News">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="IsArchiving" ColumnName="IsArchiving" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="FlowState" ColumnName="FlowState" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="MetaDescript" ColumnName="MetaDescript" />
+                <ScalarProperty Name="MetaKeyword" ColumnName="MetaKeyword" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="TitleImg" ColumnName="TitleImg" />
+                <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+                <ScalarProperty Name="Intro" ColumnName="Intro" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Attach" ColumnName="Attach" />
+                <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+                <ScalarProperty Name="IsHtml" ColumnName="IsHtml" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_U_product">
+            <EntityTypeMapping TypeName="Model.K_U_product">
+              <MappingFragment StoreEntitySet="K_U_product">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="IsArchiving" ColumnName="IsArchiving" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="FlowState" ColumnName="FlowState" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="MetaDescript" ColumnName="MetaDescript" />
+                <ScalarProperty Name="MetaKeyword" ColumnName="MetaKeyword" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="PubDate" ColumnName="PubDate" />
+                <ScalarProperty Name="Intro" ColumnName="Intro" />
+                <ScalarProperty Name="BigImg" ColumnName="BigImg" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="SmallImg" ColumnName="SmallImg" />
+                <ScalarProperty Name="Attach" ColumnName="Attach" />
+                <ScalarProperty Name="tuij" ColumnName="tuij" />
+                <ScalarProperty Name="productuse" ColumnName="productuse" />
+                <ScalarProperty Name="PageTitle" ColumnName="PageTitle" />
+                <ScalarProperty Name="IsHtml" ColumnName="IsHtml" />
+                <ScalarProperty Name="xc" ColumnName="xc" />
+                <ScalarProperty Name="dtcs" ColumnName="dtcs" />
+                <ScalarProperty Name="jjfa" ColumnName="jjfa" />
+                <ScalarProperty Name="cpal" ColumnName="cpal" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="K_U_Show">
+            <EntityTypeMapping TypeName="Model.K_U_Show">
+              <MappingFragment StoreEntitySet="K_U_Show">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IsDel" ColumnName="IsDel" />
+                <ScalarProperty Name="IsEnable" ColumnName="IsEnable" />
+                <ScalarProperty Name="IsArchiving" ColumnName="IsArchiving" />
+                <ScalarProperty Name="Orders" ColumnName="Orders" />
+                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+                <ScalarProperty Name="DelTime" ColumnName="DelTime" />
+                <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="NodeCode" ColumnName="NodeCode" />
+                <ScalarProperty Name="FlowState" ColumnName="FlowState" />
+                <ScalarProperty Name="ReferenceID" ColumnName="ReferenceID" />
+                <ScalarProperty Name="AddMan" ColumnName="AddMan" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ShowDate" ColumnName="ShowDate" />
+                <ScalarProperty Name="Addr" ColumnName="Addr" />
+                <ScalarProperty Name="Team" ColumnName="Team" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="703a7e0d1a404b04a2458701edc817b8" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.K_Act" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_F_FeedBack" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_FlowStep" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_HRApplyJob" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_HRJob" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_HRJobCate" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_HRResume" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_Member" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_MemberGroup" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ModelCommonField" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ModelCommonFieldGroup" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ModelField" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ModelFieldGroup" Width="1.5" PointX="4.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ModelManage" Width="1.5" PointX="6.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ReviewFlow" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ReviewFlowState" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_Special" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SpecialInfo" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SpecialMenu" Width="1.5" PointX="16.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysAccount" Width="1.5" PointX="16.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysAccountPermit" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysAccountSite" Width="1.5" PointX="14.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysActionPermit" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysModule" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysModuleNode" Width="1.5" PointX="18.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysPublicOper" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysRole" Width="1.5" PointX="18.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysRolePermit" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysUserGroup" Width="1.5" PointX="0.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysUserGroupPermit" Width="1.5" PointX="2.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysUserGroupRole" Width="1.5" PointX="20.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysUserRole" Width="1.5" PointX="20.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysWebSite" Width="1.5" PointX="20.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_TemplateProject" Width="1.5" PointX="20.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_Common" Width="1.5" PointX="20.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_Contact" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_DownLoad" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_friendlink" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_Jobs" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_Member" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_News" Width="1.5" PointX="8.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_PersonIntro" Width="1.5" PointX="10.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_product" Width="1.5" PointX="22.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_ProductType" Width="1.5" PointX="22.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_Show" Width="1.5" PointX="16.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_U_Thanks" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_WebSiteTemplate" Width="1.5" PointX="24.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_WebSiteTemplateNode" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_WebSiteTemplatePermit" Width="1.5" PointX="24.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_RecyclingAssociated" Width="1.5" PointX="24.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_RecyclingManage" Width="1.5" PointX="18.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_ReviewFlowLog" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_SysLog" Width="1.5" PointX="0.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.K_Types" Width="1.5" PointX="24.75" PointY="25.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
