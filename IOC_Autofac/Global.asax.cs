@@ -31,7 +31,14 @@ namespace IOC_Autofac
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-            
-        }
+            #region 三中注册方式
+           //1.builder.RegisterType<ArrayList>().As<IEnumerable>();
+           //2.builder.RegisterType<SortedList>().Named<IEnumerable>("sort");
+           //3.public enum ListType { Array, Sort }
+           // builder.RegisterType<ArrayList>().Keyed<IEnumerable>(ListType.Array);   
+           // builder.RegisterType<SortedList>().Keyed<IEnumerable>(ListType.Sort);
+           #endregion
+
+    }
     }
 }
