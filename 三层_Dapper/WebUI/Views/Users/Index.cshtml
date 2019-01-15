@@ -1,0 +1,15 @@
+﻿@model Models.Users
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@{ if (Model != null)
+    {
+        <p>@Model.UserID</p>
+        <p>@Model.UserName</p>
+        <p>@Model.Email</p>
+        <p>@Model.Address</p>
+    }
+}
