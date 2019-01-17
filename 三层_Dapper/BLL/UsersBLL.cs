@@ -31,5 +31,25 @@ namespace BLL
         {
             return new UsersService().GetAllUsers();
         }
+
+        public int UpdateInfo(string address, string username)
+        {
+            return new UsersService().UpdateInfo(address, username);
+        }
+
+        public int Update(Users users)
+        {
+            return new UsersService().Update(users);
+        }
+
+        public int SingleDelete(int uid)
+        {
+            return new UsersService().SingleDelete(uid);
+        }
+
+        public int MulDelete(int[] uids)
+        {
+            return new UsersService().MulDelete(uids);
+        }
     }
 }

@@ -11,9 +11,7 @@ namespace WebUI.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly string connectionStr = ConfigurationManager.ConnectionStrings["Learn"].ConnectionString;
-        private readonly string connectionStr2 = ConfigurationManager.AppSettings["Learn"];
-
+       
         // GET: Users
         public ActionResult Index()
         {
@@ -23,8 +21,6 @@ namespace WebUI.Controllers
             //List<Users> users = new UsersBLL().GetAllUsers();
             return View(users);
         }
-
-        
 
         public ActionResult Create() {
             var userBll = new UsersBLL();
@@ -44,5 +40,23 @@ namespace WebUI.Controllers
             return View(users);
             #endregion
         }
+
+        public ActionResult Update()
+        {
+            var userBll = new UsersBLL();
+           ViewBag.infoRe=userBll.UpdateInfo("广东梅州", "曾晓");
+            Users users = new Users() { UserID=7, UserName="毛台", Address="湖北武汉",Email="154897415@163.com" };
+            ViewData["updateRe"] = userBll.Update(users);
+            return View();   
+        }
+
+        public ActionResult Delete()
+        {
+            var bll = new UsersBLL();
+            ViewBag.singleRe = bll.SingleDelete(5);
+            ViewBag.mulRe = bll.MulDelete(new int[] {6,7});
+            return View();
+        }
+
     }
 }
