@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPagesMovie", "RazorPag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IOC_Autofac", "IOC_Autofac\IOC_Autofac.csproj", "{44940B7A-8322-4124-B58E-9E2F552B07DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactory", "SimpleFactory\SimpleFactory.csproj", "{6389DF3A-BE77-4479-B4EC-339477E61E01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{44940B7A-8322-4124-B58E-9E2F552B07DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44940B7A-8322-4124-B58E-9E2F552B07DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44940B7A-8322-4124-B58E-9E2F552B07DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6389DF3A-BE77-4479-B4EC-339477E61E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6389DF3A-BE77-4479-B4EC-339477E61E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6389DF3A-BE77-4479-B4EC-339477E61E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6389DF3A-BE77-4479-B4EC-339477E61E01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
