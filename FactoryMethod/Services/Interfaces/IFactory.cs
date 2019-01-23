@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleFactory.Interfaces
+namespace FactoryMethod.Services.Interfaces
 {
-    public interface ICar
+    public interface IFactory
     {
-        string ShowInfo();
-        
+         ICar CreateCar();
     }
 }
