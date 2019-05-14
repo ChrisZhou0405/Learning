@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28902.138
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4net_Demo", "Log4net_Demo\Log4net_Demo.csproj", "{52E9D5CD-264C-4134-B8F6-5B565F398A91}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactory", "SimpleFactory\SimpleFactory.csproj", "{6389DF3A-BE77-4479-B4EC-339477E61E01}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{712B6BFA-F24D-4AC6-B65F-057DC4B0F8C4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{011F543E-9651-4FBD-BB6A-CA366C6CE56A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{712B6BFA-F24D-4AC6-B65F-057DC4B0F8C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{712B6BFA-F24D-4AC6-B65F-057DC4B0F8C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{712B6BFA-F24D-4AC6-B65F-057DC4B0F8C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
