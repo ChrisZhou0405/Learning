@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethod", "FactoryMet
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMovie.csproj", "{011F543E-9651-4FBD-BB6A-CA366C6CE56A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoApi", "TodoApi\TodoApi.csproj", "{2CC06EB7-A16C-48FB-A8F9-53A9E5F4CAD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{011F543E-9651-4FBD-BB6A-CA366C6CE56A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC06EB7-A16C-48FB-A8F9-53A9E5F4CAD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC06EB7-A16C-48FB-A8F9-53A9E5F4CAD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC06EB7-A16C-48FB-A8F9-53A9E5F4CAD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC06EB7-A16C-48FB-A8F9-53A9E5F4CAD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
