@@ -28,12 +28,21 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/Todo
-        [HttpGet]
+        [HttpGet("GetTodoItems")]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
             return await _context.TodoItems.ToListAsync();
         }
 
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<TodoItem>>> test()
+        {
+            _context.TodoItems.Add(new TodoItem { Name = "test" });
+            _context.SaveChanges();
+            return await _context.TodoItems.ToListAsync();
+            
+        }
         // GET: api/Todo/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
