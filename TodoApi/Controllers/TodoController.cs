@@ -66,5 +66,12 @@ namespace TodoApi.Controllers
 
             return CreatedAtAction(nameof(GetTodoItem), new { id = item.Id }, item);
         }
+
+        [HttpGet("ToTest")]
+        public ActionResult<Dictionary<int,string>> ToTest()
+        {
+            var dic = new Dictionary<int, string> { [0] = "joye.net", [1] = "http://yinrq.cnblogs.com/", [2] = "Index initializers " };
+            return dic;
+        }
     }
 }
