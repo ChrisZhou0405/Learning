@@ -25,6 +25,37 @@ namespace ContosoUniversity.Controllers
             return View(await _context.Students.ToListAsync());
         }
 
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        {
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CurrentFilter"] = searchString;
+
+            var students = from s in _context.Students
+                           select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.LastName.Contains(searchString)
+                                       || s.FirstMidName.Contains(searchString));
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    students = students.OrderByDescending(s => s.LastName);
+                    break;
+                case "Date":
+                    students = students.OrderBy(s => s.EnrollmentDate);
+                    break;
+                case "date_desc":
+                    students = students.OrderByDescending(s => s.EnrollmentDate);
+                    break;
+                default:
+                    students = students.OrderBy(s => s.LastName);
+                    break;
+            }
+            return View(await students.AsNoTracking().ToListAsync());
+        }
+
         // GET: Students/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -114,6 +145,36 @@ namespace ContosoUniversity.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(student);
+        }
+
+        [HttpPost, ActionName("Edit")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> EditPost(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var studentToUpdate = await _context.Students.FirstOrDefaultAsync(s => s.ID == id);
+            if (await TryUpdateModelAsync<Student>(
+                studentToUpdate,
+                "",
+                s => s.FirstMidName, s => s.LastName, s => s.EnrollmentDate))
+            {
+                try
+                {
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException /* ex */)
+                {
+                    //Log the error (uncomment ex variable name and write a log.)
+                    ModelState.AddModelError("", "Unable to save changes. " +
+                        "Try again, and if the problem persists, " +
+                        "see your system administrator.");
+                }
+            }
+            return View(studentToUpdate);
         }
 
         // GET: Students/Delete/5

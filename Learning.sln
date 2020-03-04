@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.28902.138
+VisualStudioVersion = 16.0.29123.89
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4net_Demo", "Log4net_Demo\Log4net_Demo.csproj", "{52E9D5CD-264C-4134-B8F6-5B565F398A91}"
 EndProject
@@ -29,7 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcMovie", "MvcMovie\MvcMov
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoApi", "TodoApi\TodoApi.csproj", "{2CC06EB7-A16C-48FB-A8F9-53A9E5F4CAD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoUniversity", "ContosoUniversity\ContosoUniversity.csproj", "{BFAB84F7-6D3C-40EC-BC41-2A6E7E27AE86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoUniversity", "ContosoUniversity\ContosoUniversity.csproj", "{BFAB84F7-6D3C-40EC-BC41-2A6E7E27AE86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisStu", "RedisStu\RedisStu.csproj", "{BFC912E4-9895-4C25-80F1-D9019B91C1E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{BFAB84F7-6D3C-40EC-BC41-2A6E7E27AE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFAB84F7-6D3C-40EC-BC41-2A6E7E27AE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFAB84F7-6D3C-40EC-BC41-2A6E7E27AE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC912E4-9895-4C25-80F1-D9019B91C1E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC912E4-9895-4C25-80F1-D9019B91C1E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC912E4-9895-4C25-80F1-D9019B91C1E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC912E4-9895-4C25-80F1-D9019B91C1E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
