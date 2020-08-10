@@ -1,0 +1,31 @@
+<!--pages/test/index.wxml-->
+<view>Hello</view><view>World</view>
+<text selectable>周房城</text>
+<text>微信小程序开发</text>
+<button>默认</button>
+<button type="primary">primary</button>
+<button type="default">defalut</button>
+<button type="warn">warn</button>
+<button form-type="submit">submit</button>
+<button form-type="reset">reset</button>
+<button open-type="getUserInfo">getUserInfo</button>
+<button open-type="getPhoneNumber">getPhoneNumber</button>
+<block>
+你好
+</block>
+<input></input>
+<input type="text"></input>
+<input password></input>
+<input type="number"></input>
+<input placeholder="zhoufangcheng" ></input>
+<input disabled="true"></input>
+<input maxlength="3"></input>
+<view>{{msg}}</view>
+<input type="text" bindtap="clickEvent" value="点击我"></input>
+<input bindinput="OnChange"></input>
+
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取用户信息</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+<button open-type="contact" bindcontact="contactWx">联系客服</button>
+
+
