@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace TodoApi
+namespace Library.API
 {
     public class Program
     {
@@ -20,14 +20,5 @@ namespace TodoApi
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-
-        public void test()
-        {
-            if ("hello wored".Equals("t"))
-
-            {
-                Console.WriteLine("ifde hefhdufdushdhfghhsdfuhudhfgudhvdhgfhdugdg ");
-            }   
-        }
     }
 }
