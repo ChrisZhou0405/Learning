@@ -10,5 +10,6 @@ namespace Library.API.Services
     {
         IEnumerable<BookDto> GetBooksForAuthor(Guid authorId); 
         BookDto GetBookForAuthor(Guid authorld, Guid bookid);
+        void AddBook(BookDto book);
     }
 }
