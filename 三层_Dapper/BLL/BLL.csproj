@@ -47,11 +47,11 @@
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{b39f1597-7183-486f-ae3c-47db2e8d2b82}</Project>
-      <Name>DAL</Name>
+      <Name>三层Dapper_DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
+    <ProjectReference Include="..\Models\三层Dapper_Models.csproj">
       <Project>{78df81a1-fae9-45c0-8536-10b07f878034}</Project>
-      <Name>Models</Name>
+      <Name>三层Dapper_Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

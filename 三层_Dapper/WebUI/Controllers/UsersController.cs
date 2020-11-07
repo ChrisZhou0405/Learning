@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
-using BLL;
+using 三层Dapper_BLL;
 using System.Configuration;
 
 namespace WebUI.Controllers
